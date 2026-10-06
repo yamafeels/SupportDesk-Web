@@ -22,14 +22,20 @@ app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
 
     Firebird.attach(options, (err, db) => {
-        if (err) return res.status(500).json({ error: err.message });
+        if (err) {
+            console.error('Erro ao conectar no Firebird:', err.message);
+            return res.status(500).json({ error: err.message });
+        }
 
         const sql = 'SELECT ID, NOME, EMAIL FROM SUP_USUARIOS WHERE EMAIL = ? AND SENHA = ?';
         db.query(sql, [email, password], (err, result) => {
             db.detach();
-            if (err) return res.status(500).json({ error: err.message });
+            if (err) {
+                console.error('Erro na consulta SQL:', err.message);
+                return res.status(500).json({ error: err.message });
+            }
 
-            if (result.length > 0) {
+            if (result && result.length > 0) {
                 res.json({ success: true, user: result[0] });
             } else {
                 res.status(401).json({ success: false, message: 'E-mail ou senha incorretos!' });

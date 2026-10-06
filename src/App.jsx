@@ -38,8 +38,8 @@ export default function App() {
   });
 
   const [team, setTeam] = useState([
-    { id: 1, name: 'Marilia Kuriyama', status: 'Disponível', activity: 'Livre para atendimento', avatar: 'MK' },
-    { id: 2, name: 'Marcos Silva', status: 'Atendimento', activity: 'Chamado #1042 - Empresa Alfa', avatar: 'MS' },
+    { id: 1, name: 'Akira Kuriyama', status: 'Disponível', activity: 'Livre para atendimento', avatar: 'AK' },
+    { id: 2, name: 'Marcos Costa', status: 'Atendimento', activity: 'Chamado #1042 - Empresa Alfa', avatar: 'MC' },
     { id: 3, name: 'Ana Souza', status: 'Pausa', activity: 'Almoço (Retorna às 14:00)', avatar: 'AS' },
     { id: 4, name: 'Carlos Lima', status: 'Offline', activity: 'Desconectado', avatar: 'CL' },
   ]);
@@ -278,7 +278,7 @@ export default function App() {
           </button>
 
           <div className="flex items-center space-x-3 border-l border-slate-700 pl-4 sm:pl-6">
-            <div className="w-9 h-9 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-sm text-white">MK</div>
+            <div className="w-9 h-9 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-sm text-white">AK</div>
             <div className="hidden sm:block">
               <p className="text-sm font-medium leading-none text-white">{user.NOME}</p>
               <p className="text-xs text-slate-400 mt-1">{user.EMAIL}</p>
