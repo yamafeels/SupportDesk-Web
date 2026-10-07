@@ -64,7 +64,8 @@ Crie um banco de dados no PostgreSQL chamado `banco_suporte_web` e execute as ta
 ### **3. Inicie a API Node.js:**
 1. node server.js
    ```bash
-   A API rodará na porta http://localhost:3001
+   node server.js
+(A API rodará na porta http://localhost:3001)
 
 ### **4. Iniciar o Front-end (React)**
 
